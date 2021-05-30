@@ -31,9 +31,9 @@ text-align:center;
 
 <h3>Enter your details</h3>
 <div>
-<form action='/output' method='POST'>
+<form action='/save' method='POST'>
 <label for='Username'>Username:</label><br>
-<input type='text' name="Username" required>
+<input type='text' name="username" required>
 <br>
 <label for='password'>Password:</label><br>
 <input type='password' name="password"required>
@@ -50,11 +50,7 @@ text-align:center;
 
 <address> 
 <label for='address'>Full address:</label><br>
-<input type='text' name ="name" >
-<br>
-<label for='name'>    </label>
-<input type='text' name="name" >
-<br>
+<input type='text' name ="address" >
 </address>
 <input type='submit' value='Submit'>
 </form>
