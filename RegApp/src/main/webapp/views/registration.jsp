@@ -39,7 +39,7 @@ text-align:center;
 <input type='password' name="password"required>
 <br>
 <label for='name'>Name:</label><br>
-<input type='text' name="name" required height=32>
+<input type='text' name="name" required >
 <br>
 <label for ="phone">Mobile no.:</label><br>
 <input type ="tel" id="phone" name="phone" pattern ="[0-9]{3}[0-9]{3}[0-9]{4}">
@@ -50,7 +50,7 @@ text-align:center;
 
 <address> 
 <label for='address'>Full address:</label><br>
-<input type='text' name ="address" >
+<input type='text' name ="address" height = 50>
 </address>
 <input type='submit' value='Submit'>
 </form>
