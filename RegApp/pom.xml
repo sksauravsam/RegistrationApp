@@ -37,6 +37,13 @@
 			<artifactId>tomcat-jasper</artifactId>
 			<version>9.0.46</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+		    <groupId>org.json</groupId>
+		    <artifactId>json</artifactId>
+		    <version>20210307</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>

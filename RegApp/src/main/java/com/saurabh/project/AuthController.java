@@ -2,6 +2,7 @@ package com.saurabh.project;
 
 import java.util.HashMap;
 
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,20 +29,24 @@ public class AuthController {
 		final String uri = String.format("https://2factor.in/API/V1/%s/SMS/+91%s/AUTOGEN", "cdd89795-c11e-11eb-8089-0200cd936042", phone);
 
 	    RestTemplate restTemplate = new RestTemplate();
+	    ModelAndView model = new ModelAndView("/auth");
 	    try {
-	    String result = restTemplate.getForObject(uri, String.class);
-	    System.out.println(result);
+		    String result = restTemplate.getForObject(uri, String.class);
+		    JSONObject obj = new JSONObject(result);
+		    String session_id = obj.getString("Details");
+		    model.addObject("name", name);
+		    model.addObject("password", password);
+		    model.addObject("username", username);
+		    model.addObject("phone", phone);
+		    model.addObject("birthday", birthday);
+		    model.addObject("address", address);
+		    model.addObject("session_id", session_id);
 	    }
 	    catch (Exception e) {
 			System.out.println(e);
 		}
-	    ModelAndView model = new ModelAndView("/auth");
-	    model.addObject("name", name);
-	    model.addObject("password", password);
-	    model.addObject("username", username);
-	    model.addObject("phone", phone);
-	    model.addObject("birthday", birthday);
-	    model.addObject("address", address);
+	    
+	    
 		return model;
 	}
 }

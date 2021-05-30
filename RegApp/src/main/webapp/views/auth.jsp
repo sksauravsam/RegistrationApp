@@ -18,6 +18,7 @@
 <input type="hidden" id="phone" name="phone" value=${phone} >
 <input type="hidden" id="birthday" name="birthday" value=${birthday } >
 <input type="hidden" id="address" name="address" value=${address } >
+<input type="hidden" id="session_id" name="session_id" value=${session_id } >
 
 <input type='submit' value='Verify'>
 </form>
