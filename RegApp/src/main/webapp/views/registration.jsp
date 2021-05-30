@@ -31,7 +31,7 @@ text-align:center;
 
 <h3>Enter your details</h3>
 <div>
-<form action='/save' method='POST'>
+<form action='/auth' method='POST'>
 <label for='Username'>Username:</label><br>
 <input type='text' name="username" required>
 <br>

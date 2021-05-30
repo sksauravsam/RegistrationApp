@@ -17,6 +17,8 @@ public class DatabaseController {
 	@RequestMapping("/save")
 	public String saveToDatabase(@RequestParam HashMap<String, String> request_body) {
 		try {
+			String otp = request_body.get("otp");
+			System.out.println(otp);
 			String name=request_body.get("name");
 			String password= request_body.get("password");
 			String username= request_body.get("username");
@@ -32,6 +34,7 @@ public class DatabaseController {
 			int rs = stmt.executeUpdate(insert_part + values_part);
 			System.out.printf("Inserted %d records into the table...", rs);
 			con.close();
+			
 		} catch (Exception e) {
 			System.out.println(e);
 		}
