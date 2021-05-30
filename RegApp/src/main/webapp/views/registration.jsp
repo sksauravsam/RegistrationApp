@@ -44,8 +44,8 @@ text-align:center;
 <label for ="phone">Mobile no.:</label><br>
 <input type ="tel" id="phone" name="phone" pattern ="[0-9]{3}[0-9]{3}[0-9]{4}">
 <br>
-<label for="birthday">Birthday:</label><br>
-<input type="date" id="birthday" name ="birthday">
+<label for="birthday">Day of Birth:</label><br>
+<input type="date" id="birthday" name ="birthday"required>
 <br>
 
 <address> 
