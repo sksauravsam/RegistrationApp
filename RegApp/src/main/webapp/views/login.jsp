@@ -14,11 +14,11 @@ h2{text="red"; bgcolor="yellow"; text-align:center;}
 
    </style>
 <title>LOGIN PAGE</title>
-<h2> LOGIN PAGE</h2>
+
 </head>
 <body text="blue" bgcolor="aqua"=>
 <div id="container">
-<form action='/login' method='POST'>
+<form action='/loginsuccess' method='GET'>
 <label for="Username">Username:</label><br>
 <input type='text' id="username" name="username" required>
 <br>
