@@ -11,7 +11,7 @@ to open registration page.
 *After submitting the user details it will updated in mysql database.
 
 *Create a database named "mydatabase" and inside it name a "users" table.
-(columns in the tables are-: id , username, password, name, mobile no., date of birth, address.)
+(Rows in the tables are-: id , username, password, name, mobile no., date of birth, address.)
 
 *Run "http://localhost:8080/login" for the login page.
 
