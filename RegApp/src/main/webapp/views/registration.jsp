@@ -27,6 +27,7 @@ text-align:center;
 </style>
 </head>
 <body text = "blue" bgcolor = "aqua">
+
 <h2>Registration Form</h2>
 
 <h3>Enter your details</h3>

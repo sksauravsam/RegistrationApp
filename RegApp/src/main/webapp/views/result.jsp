@@ -8,8 +8,8 @@
 </head>
 <body>
 <div>
-<h2>Registration form</h2>
-<span><%= request.getParameter("Username") %></span><br>
+<h2>Registration successful</h2>
+<h3>Your entered details</h3>
 <span><%= request.getParameter("name") %></span><br>
 <span><%= request.getParameter("phone") %></span><br>
 <span><%= request.getParameter("birthday") %></span><br>

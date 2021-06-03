@@ -4,15 +4,15 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<style> 
-input{
-text-align: center;}
-h2{text-align:center;}</style>
+<style>
+body{
+text-align:center;} 
+</style>
 <title></title>
 </head>
 <body>
-<h2>This is logout page</h2> <BR>
-<input type='submit' value='logout'>
+<h1>This is logout page</h1> <BR><br>
+<input type='submit' value='logout' height = 50>
 
 </body>
 </html>

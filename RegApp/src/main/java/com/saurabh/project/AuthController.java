@@ -1,9 +1,6 @@
 package com.saurabh.project;
-
 import java.util.HashMap;
-
 import org.json.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,10 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 @ResponseBody
 public class AuthController {
 	
-	@Autowired
-	private DatabaseController database_controller;
-	
-	@RequestMapping("/auth")
+ @RequestMapping("/auth")  
 	public ModelAndView authenticate(@RequestParam HashMap<String, String> request_body) {
 		String name=request_body.get("name");
 		String password= request_body.get("password");

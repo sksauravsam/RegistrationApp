@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Output</title>
 </head>
-<body text ="blue">
-<h1 text="blue">This is the index page</h1>
+<body>
+<div>
+<h2>Invalid OTP</h2>
+</div>
 </body>
 </html>
