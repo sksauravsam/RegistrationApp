@@ -1,8 +1,8 @@
 # RegistrationApp
 Instruction to run this app-:
+*Firstly import the project to the IDE(Eclipse recommended).
 
-
-*Firstly Run RegApp(project name) as  springboot app.
+*After that run RegApp(project name) as  springboot app.
 
 *open a browser, and run the URL:- "http://localhost:8080/login"
 to open login page.
@@ -13,10 +13,10 @@ then login using your username and password which you had provided during regist
 *Create a database named "mydatabase" and inside it name a "users" table.
 (columns in the tables are-: id(auto-increment) , username, password, name, mobile no., date of birth, address.)
 
-after login you will be redirected to the main page from there you can logout.
+*After login you will be redirected to the main page from there you can logout.
 
 
-
+Tools used for making this projectL:-Eclipse IDE, Springboot,MySql.
 
 : Q)If you were given more time to improve your solution what would you improve and why?
 Ans- To be honest, There are lot of things can be improved in this projects. As i am inexperienced 
