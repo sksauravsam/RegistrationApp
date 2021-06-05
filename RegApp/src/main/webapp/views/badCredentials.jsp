@@ -4,14 +4,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<style>
-body{
-text-align:center;} 
-</style>
-<title></title>
+<title>Output</title>
 </head>
 <body>
-<h1>Welcome, Login Successful</h1> <BR><br>
-<input type='button' value='logout' height = 50 onclick="window.location ='/login'">
+<div>
+<h2>Bad Credentials</h2><br>
+<h3>Please enter registered user details.</h3>
+</div>
 </body>
 </html>

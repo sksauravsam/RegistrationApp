@@ -20,7 +20,7 @@
 <input type="hidden" id="address" name="address" value=${address } >
 <input type="hidden" id="session_id" name="session_id" value=${session_id } >
 
-<input type='submit' value='Verify' >
+<input type='submit' value='Verify'>
 </form>
 </body>
 </html>

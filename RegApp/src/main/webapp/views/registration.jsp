@@ -50,7 +50,7 @@ text-align:center;
 <br>
 
 <address> 
-<label for='address'>Full address:</label><br>
+<label for='address'>Full address(optional):</label><br>
 <input type='text' name ="address" height = 50>
 </address>
 <input type='submit' value='Submit'>
