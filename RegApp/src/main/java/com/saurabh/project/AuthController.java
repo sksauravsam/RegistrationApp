@@ -20,12 +20,12 @@ public class AuthController {
 		String phone= request_body.get("phone");
 		String birthday= request_body.get("birthday");
 		String address=request_body.get("address");
-		final String uri = String.format("https://2factor.in/API/V1/%s/SMS/+91%s/AUTOGEN", "cdd89795-c11e-11eb-8089-0200cd936042", phone);
+		final String url = String.format("https://2factor.in/API/V1/%s/SMS/+91%s/AUTOGEN", "cdd89795-c11e-11eb-8089-0200cd936042", phone);
 
 	    RestTemplate restTemplate = new RestTemplate();
 	    ModelAndView model = new ModelAndView("/auth");
 	    try {
-		    String result = restTemplate.getForObject(uri, String.class);
+		    String result = restTemplate.getForObject(url, String.class);
 		    JSONObject obj = new JSONObject(result);
 		    String session_id = obj.getString("Details");
 		    model.addObject("name", name);

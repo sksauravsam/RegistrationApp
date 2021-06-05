@@ -27,9 +27,13 @@ public class LoginSucessController {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabase", "admin", "admin");
 			Statement statement = con.createStatement();
-			String sql ="select * from users";
+		//	String sql ="select * from users where username like 'sam2'";
+			String sql = String.format("select * from users where username like '%s'",username);
+			System.out.println(sql);
 			ResultSet resultSet = statement.executeQuery(sql);
-			while(resultSet.next()){
+			
+			
+		while(resultSet.next()){
 				
 				String usernameFromDB = resultSet.getString("username");
 				String passwordFromDB = resultSet.getString("password");
@@ -37,13 +41,14 @@ public class LoginSucessController {
 				
 				if(username.equals(usernameFromDB) && password.equals(passwordFromDB)) {
 					System.out.println("Match Found : -" + usernameFromDB + "-"+ username + " : "+ passwordFromDB+"-"+password );
+					con.close();
 					return model;
 					
 				}
 				
 			}
+		con.close();
 			
-			con.close();
 			} catch (Exception e) {
 			e.printStackTrace();
 			}

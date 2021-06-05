@@ -19,9 +19,15 @@ public class DatabaseController {
 
 	@RequestMapping("/save")
 	public ModelAndView saveToDatabase(@RequestParam HashMap<String, String> request_body) {
-		String status = "";
-		ModelAndView model = new ModelAndView("/result");
-		ModelAndView model_otp = new ModelAndView("/invalidOtp");
+		String name=request_body.get("name");
+		String password= request_body.get("password");
+		String username= request_body.get("username");
+		String phone= request_body.get("phone");
+		String birthday= request_body.get("birthday");
+		String address=request_body.get("address");
+		
+		ModelAndView resultView = new ModelAndView("/result");
+		ModelAndView invaliOtpView = new ModelAndView("/invalidOtp");
 		try {
 			String otp = request_body.get("otp");
 			String session_id = request_body.get("session_id");
@@ -32,36 +38,31 @@ public class DatabaseController {
 			String uri = String.format("https://2factor.in/API/V1/%s/SMS/VERIFY/%s/%s", "cdd89795-c11e-11eb-8089-0200cd936042", session_id, otp);
 			String result = restTemplate.getForObject(uri, String.class);
 		    JSONObject obj = new JSONObject(result);
-		    status = obj.getString("Status");
+		    String status = obj.getString("Status");
 			System.out.println(status);
 			
 			
-			if(status != "Error") {
-				String name=request_body.get("name");
-				String password= request_body.get("password");
-				String username= request_body.get("username");
-				String phone= request_body.get("phone");
-				String birthday= request_body.get("birthday");
-				String address=request_body.get("address");
+			if(status.equals("Success")) {
 				
 				Class.forName("com.mysql.cj.jdbc.Driver");
 				Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabase", "admin", "admin");
 				Statement stmt = con.createStatement();
-				String insert_part = "insert into users (name, password, username, mobile_no, birthdate, address) values ";
-				String values_part = String.format("('%s', '%s', '%s', '%s', '%s', '%s')", name, password, username, phone, birthday, address);
+				String insert_part = "insert into users ( name, password,username, mobile_no, birthdate, address) values ";
+				String values_part = String.format("('%s', '%s', '%s', '%s', '%s', '%s')",name, password,username,  phone, birthday, address);
 				System.out.println(insert_part + values_part);
 				int rs = stmt.executeUpdate(insert_part + values_part);
 				System.out.printf("Inserted %d records into the table...", rs);
 				con.close();
 				
-				model.addObject("name", name);
-			    model.addObject("password", password);
-			    model.addObject("phone", phone);
-			    model.addObject("birthday", birthday);
-			    model.addObject("address", address);
+				resultView.addObject("name", name);
+				resultView.addObject("password", password);
+			    resultView.addObject("phone", phone);
+			    resultView.addObject("birthday", birthday);
+			    resultView.addObject("address", address);
+			    return resultView;
 			}else {
 				System.out.println("Invalid OTP");
-				return model_otp;
+				return invaliOtpView;
 				
 			}
 			
@@ -69,8 +70,11 @@ public class DatabaseController {
 			
 		} catch (Exception e) {
 			System.out.println(e);
-			return model_otp;
+			
 		}
-		return model;
+	
+		return null;
 	}
-}
+	
+	}
+
