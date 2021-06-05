@@ -12,7 +12,7 @@ If you are a new user then click on "register" for registeration or if you alrea
 then login using your username and password which you had provided during registeration.
 
 *Create a database named "mydatabase" and inside it name a "users" table.
-(Rows in the tables are-: id(auto-increment) , username, password, name, mobile no., date of birth, address.)
+(columns in the tables are-: id(auto-increment) , username, password, name, mobile no., date of birth, address.)
 
 after login you will be redirected to the main page from there you can logout.
 
