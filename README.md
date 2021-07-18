@@ -18,10 +18,6 @@ then login using your username and password which you had provided during regist
 
 Tools used for making this projectL:-Eclipse IDE, Springboot,MySql.
 
-: Q)If you were given more time to improve your solution what would you improve and why?
-Ans- To be honest, There are lot of things can be improved in this projects. As i am inexperienced 
-in this work right now but with time if i collect more knowledge about this. A lot can be improved like 
-its User interface,can be added more functions so that it can be more user friendly.
 
 Thank you.
 >>>>>>> 666dd14d672d272024b494162de495096097d20e
